@@ -1,11 +1,11 @@
 {
-  "name": "shopifychallenge2",
+  "name": "apichallenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "----",
   "main": "server.js",
   "scripts": {
     "test": "mocha --exit",
-    "start" : "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +19,17 @@
     "mysql": "^2.16.0",
     "nodemon": "^1.18.4",
     "should": "^13.2.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkbru/APIChallenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkbru/APIChallenge/issues"
+  },
+  "homepage": "https://github.com/mkbru/APIChallenge#readme"
 }
