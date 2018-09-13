@@ -14,13 +14,12 @@ Requests made to the API must have the following headers:
 
 **Deploying Locally**
 
-        git clone rep
-        npm install
-        npm start
+![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-start.png)
+
 
 **Run Tests**
 
-        npm test
+![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-test.png)
 
 **Make Requests**
 
