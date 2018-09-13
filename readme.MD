@@ -1,8 +1,33 @@
+
+
+## Getting Started
+
+----
+
+**Authentication**
+
+Requests made to the API must have the following headers:
+
+        'content-type' :  'application/json'
+
+        'authorization' : 'qQWrg*Ws+/MS2#>!QQf89r!(8g~ePA'
+
+**Deploying Locally**
+
+        git clone rep
+        npm install
+        npm start
+
+**Run Tests**
+
+        npm test
+
+**Make Requests**
+
 **API Instructions**
 ----
   Table of Contents
   
-  1. [Getting Started](#getting-started)
   
   2. [Shops](#2.1-create-shop)
   
@@ -39,32 +64,6 @@
         4.4 [Update Order](#4.4-update-order)
         
         4.5 [Delete Order](#4.5-delete-order)
-
-
-
-## Getting Started
-
-----
-
-**Authentication**
-
-Requests made to the API must have the following headers:
-
-        'content-type' :  'application/json'
-
-        'authorization' : 'qQWrg*Ws+/MS2#>!QQf89r!(8g~ePA'
-
-**Deploying Locally**
-
-        git clone rep
-        npm install
-        npm start
-
-**Run Tests**
-
-        npm test
-
-**Make Requests**
 
 
 

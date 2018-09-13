@@ -20,7 +20,7 @@ router.post('/', (req,res) => {
                 else{
                     connection.query(insertQuery, (error,results,fields) => {
                         if (error) throw error;
-                        console.log(results);
+                        //console.log(results);
                         return res.json({'message' : 'added new product', 'productName' : req.body.productName, 'productPrice' : req.body.productPrice});
                     })
                 }
@@ -84,7 +84,7 @@ router.put('/:productId', (req,res) => {
             (error, results, fields) => {
                 if (error) throw error;
 
-                console.log(results[0].COUNT);
+                //console.log(results[0].COUNT);
                 if(results[0].COUNT === 0){      //edge case:
                     return res.json({'error':'product doesn\'t exist'});
                 }
