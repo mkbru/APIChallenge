@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806d4068-4eb5-4ff3-ba7a-8f5578a3116c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/css/markdown.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/readme.MD" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,12 +36,17 @@
         <entry file="file://$PROJECT_DIR$/readme.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <first_editor relative-caret-position="570">
+                <caret line="38" column="150" selection-start-line="38" selection-start-column="150" selection-end-line="38" selection-end-column="150" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="markdown.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/markdown.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="shops.js" pinned="false" current-in-tab="false">
@@ -155,6 +161,11 @@
             <path>
               <item name="APIChallenge" type="b2602c69:ProjectViewProjectNode" />
               <item name="APIChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APIChallenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APIChallenge" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -253,12 +264,12 @@
       <updated>1536772138024</updated>
       <workItem from="1536772140127" duration="15241000" />
       <workItem from="1536809656039" duration="313000" />
-      <workItem from="1536811650352" duration="5427000" />
+      <workItem from="1536811650352" duration="5734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20981000" />
+    <option name="totallyTimeSpent" value="21288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="203" width="1920" height="796" extended-state="0" />
@@ -449,11 +460,14 @@
     <entry file="file://$PROJECT_DIR$/images/npm-start.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/markdown.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <first_editor relative-caret-position="570">
+            <caret line="38" column="150" selection-start-line="38" selection-start-column="150" selection-end-line="38" selection-end-column="150" />
           </first_editor>
           <second_editor />
         </state>

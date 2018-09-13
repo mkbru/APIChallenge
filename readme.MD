@@ -1,10 +1,3 @@
-<style>
-.markdown-body table {
-    display: table;
-    width: 100%;
-    overflow: auto;
-}
-</style>
 
 ## API Challenge
 
@@ -43,7 +36,7 @@ Requests made to the API MUST have the following headers:
   
 | Shops API  |Method| 
 | ------------- | -------------   | 
-|[Create a new Shop]()        |/Post      |
+|[Create a new Shop]()        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|/Post      |
 |[Fetch all Shops]()          |/Get      |
 |[Fetch a Shop by it's ID]() |/Get      |
 |[Update a Shop by it's ID]() |/Update    |
