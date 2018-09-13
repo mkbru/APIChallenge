@@ -35,8 +35,8 @@
         <entry file="file://$PROJECT_DIR$/readme.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="49">
-                <caret line="39" column="115" selection-start-line="39" selection-start-column="115" selection-end-line="39" selection-end-column="115" />
+              <first_editor relative-caret-position="583">
+                <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -268,12 +268,12 @@
       <updated>1536772138024</updated>
       <workItem from="1536772140127" duration="15241000" />
       <workItem from="1536809656039" duration="313000" />
-      <workItem from="1536811650352" duration="6518000" />
+      <workItem from="1536811650352" duration="7544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22072000" />
+    <option name="totallyTimeSpent" value="23098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="203" width="1920" height="796" extended-state="0" />
@@ -474,8 +474,8 @@
     <entry file="file://$PROJECT_DIR$/readme.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="49">
-            <caret line="39" column="115" selection-start-line="39" selection-start-column="115" selection-end-line="39" selection-end-column="115" />
+          <first_editor relative-caret-position="583">
+            <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>

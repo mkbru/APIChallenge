@@ -8,7 +8,7 @@ Give description about this project and maybe tech stalk.
 
 **Testing the API**
 
-* [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
+* [Advanced Rest Client (Personal Favourite)](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
 
 * [Postman](https://www.getpostman.com/apps)
 
@@ -37,8 +37,8 @@ Requests made to the API MUST have the following headers:
   
 | Shops API |Method| 
 |------------- | -------------   | 
-|[Create a new Shop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;](#create-shop)        |`/Post `     |
-|[Fetch all Shops]()          |`/Get  `    |
+|[Create a new Shop](#createshop)        |`/Post `     |
+|[Fetch all Shops](#fetchshop)          |`/Get  `    |
 |[Fetch a Shop by ID]() |`/Get `     |
 |[Update a Shop by ID]() |`/Update `   |
 |[Delete a Shop by ID]() |`/Delete`    |
@@ -47,20 +47,21 @@ Requests made to the API MUST have the following headers:
 | ------------- | -------------   | 
 |[Create a new Product]()        |`/Post  `    |
 |[Fetch all Products]()          |`/Get`      |
-|[Fetch a Produt by it's ID]() |`/Get    `  |
-|[Update a Product by it's ID]() |`/Update `   |
-|[Delete a Product by it's ID]() |`/Delete   ` |
+|[Fetch a Produt by ID]() |`/Get    `  |
+|[Update a Product by ID]() |`/Update `   |
+|[Delete a Product by ID]() |`/Delete   ` |
 
 | Orders API  |Method| 
 | ------------- | -------------   | 
 |[Create a new Order]()        |`/Post   `   |
 |[Fetch all Orders]()          |`/Get `     |
-|[Fetch an order by it's ID]() |`/Get  `    |
-|[Update an order by it's ID]() |`/Update `   |
-|[Delete an order by it's ID]() |`/Delete  `  |
+|[Fetch an order by ID]() |`/Get  `    |
+|[Update an order by ID]() |`/Update `   |
+|[Delete an order by ID]() |`/Delete  `  |
   
 
- 
+
+<a name="createshop" /> 
 
 ## Create a new Shop
 
@@ -121,7 +122,9 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
   In the current design it is the clients responsibility to generate the shop ID.
-  
+
+
+<a name="fetchshop" />   
 
 ## Fetch all Shops
 
@@ -175,7 +178,7 @@ Requests made to the API MUST have the following headers:
   The call to /shops will fetch all shops
 
 
-## Fetch a Shop by ID
+## Shops API : Fetch a Shop by ID
 
 ----
   Returns json data about a single shop.
@@ -227,7 +230,7 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
-## Update a Shop by ID
+## Shops API : Update a Shop by ID
 
 ----
   Updates a product price or name.
@@ -285,7 +288,7 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## Delete a Shop by ID
+## Shops API : Delete a Shop by ID
 
 ----
   Delete a specified shop.
@@ -340,7 +343,7 @@ Requests made to the API MUST have the following headers:
   Deleting a shop will delete any products or orders tied to it.
   
 
-## 3.1 Create Product
+## Products API : Create a new Product
 
 ----
   Adds a new product to a specified shop.
@@ -406,7 +409,7 @@ Requests made to the API MUST have the following headers:
 
   In the current design it is the clients responsibility to generate the product ID.
 
-## 3.2 Read Products
+## Products API : Fetch all Products
 
 ----
   Returns json data about all products.
@@ -467,7 +470,7 @@ Requests made to the API MUST have the following headers:
 
   The call to /products will fetch all products from all shops
   
-## 3.3 Read Product
+## Products API : Fetch a Product by ID
 
 ----
   Returns json data about a single product.
@@ -522,7 +525,7 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## 3.4 Update Product
+## Products API : Update a Product by ID
 
 ----
   Updates a product price or name.
@@ -582,7 +585,7 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## 3.5 Delete Product
+## Products API : Delete a Product by ID
 
 ----
   Delete a specified product.
@@ -635,7 +638,7 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## 4.1 Create Order
+## Orders API : Create a new Order
 
 ----
   Adds a new order line item.
@@ -725,7 +728,7 @@ Requests made to the API MUST have the following headers:
   
   The order cannot contain items from multiple shops.
   
-## 4.2 Read Orders
+## Orders API : Fetch all Orders
 
 ----
   Returns json data about all orders.
@@ -800,7 +803,7 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## 4.3 Read Order
+## Orders API : Fetch an Order by ID
 
 ----
   Returns json data about a single order.
@@ -864,7 +867,7 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## 4.4 Update Order
+## Orders API : Update an Order by ID
 
 ----
   Updates a product price or name.
@@ -928,7 +931,7 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
-## 4.5 Delete Order
+## Orders API : Delete an Order by ID
 
 ----
   Delete a specified product.
