@@ -36,33 +36,33 @@ Requests made to the API MUST have the following headers:
 ----
   
 | Shops API |Method| 
-| ------------- | -------------   | 
-|[Create a new Shop]()        |/Post      |
-|[Fetch all Shops]()          |/Get      |
-|[Fetch a Shop by it's ID]() |/Get      |
-|[Update a Shop by it's ID]() |/Update    |
-|[Delete a Shop by it's ID]() |/Delete    |
+|------------- | -------------   | 
+|[Create a new Shop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;](#create-shop)        |`/Post `     |
+|[Fetch all Shops]()          |`/Get  `    |
+|[Fetch a Shop by ID]() |`/Get `     |
+|[Update a Shop by ID]() |`/Update `   |
+|[Delete a Shop by ID]() |`/Delete`    |
   
 | Products API  |Method| 
 | ------------- | -------------   | 
-|[Create a new Product]()        |/Post      |
-|[Fetch all Products]()          |/Get      |
-|[Fetch a Produt by it's ID]() |/Get      |
-|[Update a Product by it's ID]() |/Update    |
-|[Delete a Product by it's ID]() |/Delete    |
+|[Create a new Product]()        |`/Post  `    |
+|[Fetch all Products]()          |`/Get`      |
+|[Fetch a Produt by it's ID]() |`/Get    `  |
+|[Update a Product by it's ID]() |`/Update `   |
+|[Delete a Product by it's ID]() |`/Delete   ` |
 
 | Orders API  |Method| 
 | ------------- | -------------   | 
-|[Create a new Order]()        |/Post      |
-|[Fetch all Orders]()          |/Get      |
-|[Fetch an order by it's ID]() |/Get      |
-|[Update an order by it's ID]() |/Update    |
-|[Delete an order by it's ID]() |/Delete    |
+|[Create a new Order]()        |`/Post   `   |
+|[Fetch all Orders]()          |`/Get `     |
+|[Fetch an order by it's ID]() |`/Get  `    |
+|[Update an order by it's ID]() |`/Update `   |
+|[Delete an order by it's ID]() |`/Delete  `  |
   
 
  
 
-## 2.1 Create Shop
+## Create a new Shop
 
 ----
 
@@ -123,7 +123,7 @@ Requests made to the API MUST have the following headers:
   In the current design it is the clients responsibility to generate the shop ID.
   
 
-## 2.2 Read Shops
+## Fetch all Shops
 
 ----
   Returns json data about all shops.
@@ -175,7 +175,7 @@ Requests made to the API MUST have the following headers:
   The call to /shops will fetch all shops
 
 
-## 2.3 Read Shop
+## Fetch a Shop by ID
 
 ----
   Returns json data about a single shop.
@@ -227,7 +227,7 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
-## 2.4 Update Shop
+## Update a Shop by ID
 
 ----
   Updates a product price or name.
@@ -285,7 +285,7 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## 2.5 Delete Shop
+## Delete a Shop by ID
 
 ----
   Delete a specified shop.
