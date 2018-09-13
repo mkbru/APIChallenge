@@ -1,12 +1,22 @@
 
 
-## Getting Started
+## API Challenge
+
+Give description about this project and maybe tech stalk.
 
 ----
 
+**Testing the API**
+
+* [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
+
+* [Postman](https://www.getpostman.com/apps)
+
+* curl
+
 **Authentication**
 
-Requests made to the API must have the following headers:
+Requests made to the API MUST have the following headers:
 
         'content-type' :  'application/json'
 
@@ -21,50 +31,36 @@ Requests made to the API must have the following headers:
 
 ![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-test.png)
 
-**Make Requests**
 
 **API Instructions**
 ----
-  Table of Contents
   
+| Shops API  |Method| 
+| ------------- | -------------   | 
+|[Create a new Shop]()        |/Post      |
+|[Fetch all Shops]()          |/Get      |
+|[Fetch a Shop by it's ID]() |/Get      |
+|[Update a Shop by it's ID]() |/Update    |
+|[Delete a Shop by it's ID]() |/Delete    |
   
-  2. [Shops](#2.1-create-shop)
-  
-        2.1 [Create Shop](#2.1-create-shop)
-        
-        2.2 [Read Shop](#2.2-read-shops)
-        
-        2.3 [Read Shops](#2.3-read-shop)
-        
-        2.4 [Update Shop](#2.4-update-shop)
-        
-        2.5 [Delete Shop](#2.5-delete-shop)
-  
-  3. [Products]()
-  
-        3.1 [Create Product](#3.1-create-product)
-        
-        3.2 [Read Products](#3.2-read-products)
-        
-        3.3 [Read Product](#3.3-read-product)
-        
-        3.4 [Update Product](#3.4-update-product)
-        
-        3.5 [Delete Product](#3.5-delete-product)
-  
-  4. [Orders]()
+| Products API  |Method| 
+| ------------- | -------------   | 
+|[Create a new Product]()        |/Post      |
+|[Fetch all Products]()          |/Get      |
+|[Fetch a Produt by it's ID]() |/Get      |
+|[Update a Product by it's ID]() |/Update    |
+|[Delete a Product by it's ID]() |/Delete    |
 
-        4.1 [Create Order](#4.1-create-order)
-        
-        4.2 [Read Orders](#4.2-read-orders)
-        
-        4.3 [Read Order](#4.3-read-order)
-        
-        4.4 [Update Order](#4.4-update-order)
-        
-        4.5 [Delete Order](#4.5-delete-order)
+| Orders API  |Method| 
+| ------------- | -------------   | 
+|[Create a new Order]()        |/Post      |
+|[Fetch all Orders]()          |/Get      |
+|[Fetch an order by it's ID]() |/Get      |
+|[Update an order by it's ID]() |/Update    |
+|[Delete an order by it's ID]() |/Delete    |
+  
 
-
+ 
 
 ## 2.1 Create Shop
 
