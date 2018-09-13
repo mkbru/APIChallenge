@@ -1,4 +1,10 @@
-
+<style>
+.markdown-body table {
+    display: table;
+    width: 100%;
+    overflow: auto;
+}
+</style>
 
 ## API Challenge
 
