@@ -34,9 +34,9 @@ Requests made to the API MUST have the following headers:
 **API Instructions**
 ----
   
-| Shops API  |Method| 
+| Shops API &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Method| 
 | ------------- | -------------   | 
-|[Create a new Shop]()        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|/Post      |
+|[Create a new Shop]()        |/Post      |
 |[Fetch all Shops]()          |/Get      |
 |[Fetch a Shop by it's ID]() |/Get      |
 |[Update a Shop by it's ID]() |/Update    |
