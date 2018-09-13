@@ -1,4 +1,9 @@
-FROM node:8.4.0
+FROM node:6.9.2
+
+COPY package*.json ./
+RUN npm install
+
+COPY ..
 EXPOSE 8080
-COPY server.js .
-CMD node server.js
+
+ENTRYPOINT ["node","server.js"]
