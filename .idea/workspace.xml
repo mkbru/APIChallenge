@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806d4068-4eb5-4ff3-ba7a-8f5578a3116c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/css/markdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/markdown.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/readme.MD" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,21 +32,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.MD" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.MD" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="540">
-                <caret line="36" column="132" selection-start-line="36" selection-start-column="132" selection-end-line="36" selection-end-column="132" />
+              <first_editor>
+                <caret column="29" selection-start-column="29" selection-end-column="29" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="markdown.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="markdown.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/markdown.css">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="shops.js" pinned="false" current-in-tab="false">
@@ -114,6 +119,7 @@
         <option value="$PROJECT_DIR$/controllers/products.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/readme.MD" />
+        <option value="$PROJECT_DIR$/css/markdown.css" />
       </list>
     </option>
   </component>
@@ -263,12 +269,12 @@
       <updated>1536772138024</updated>
       <workItem from="1536772140127" duration="15241000" />
       <workItem from="1536809656039" duration="313000" />
-      <workItem from="1536811650352" duration="5804000" />
+      <workItem from="1536811650352" duration="5952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21358000" />
+    <option name="totallyTimeSpent" value="21506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="203" width="1920" height="796" extended-state="0" />
@@ -459,16 +465,20 @@
     <entry file="file://$PROJECT_DIR$/images/npm-start.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/markdown.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="540">
-            <caret line="36" column="132" selection-start-line="36" selection-start-column="132" selection-end-line="36" selection-end-column="132" />
+          <first_editor>
+            <caret column="29" selection-start-column="29" selection-end-column="29" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/markdown.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>

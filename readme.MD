@@ -1,3 +1,4 @@
+<link href="/css/markdown.css" rel="stylesheet"></link>
 
 ## API Challenge
 
@@ -34,7 +35,7 @@ Requests made to the API MUST have the following headers:
 **API Instructions**
 ----
   
-| Shops API &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Method| 
+| Shops API |Method| 
 | ------------- | -------------   | 
 |[Create a new Shop]()        |/Post      |
 |[Fetch all Shops]()          |/Get      |
