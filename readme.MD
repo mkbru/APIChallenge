@@ -36,12 +36,12 @@ Below is an example of a request made to the API using the Advanced Rest Client 
 
 **Deploying Locally**
 
-![](https://media.giphy.com/media/2imOv2hRva5aJIsnZO/giphy.gif)
+![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-start.png)
 
 
 **Run Tests**
 
-![](https://media.giphy.com/media/ki8t9nCD3JDVqMOAFm/giphy.gif)
+![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-test.png)
 
 
 **API Instructions**
