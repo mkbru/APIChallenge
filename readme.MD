@@ -3,13 +3,12 @@
 
 ## API Challenge
 
-This is the server-side API i designed I for the Developer intern challenge.
+This is the API designed for the Developer intern challenge.
 
-The API is written using Node.js/Express framework and MySQL.
+The API is written using the Node.js/Express framework and MySQL database.
 
-The application is running as a service on GKE accessible at this <ip>
+The application is running publicly on kubernetes and can be accessed on <ip>
 
-Body content type must be set to application/json
 
 ----
 
@@ -25,9 +24,13 @@ Body content type must be set to application/json
 
 Requests made to the API MUST have the following headers:
 
-        'content-type' :  'application/json'
+        'Accept' : 'application/json'
 
-        'authorization' : 'qQWrg*Ws+/MS2#>!QQf89r!(8g~ePA'
+        'Authorization' : 'qQWrg*Ws+/MS2#>!QQf89r!(8g~ePA'
+        
+        'Content-type' :  'application/json'
+        
+Below is an example of a request made to the API using the Advanced Rest Client tool.
 
 ![](https://media.giphy.com/media/3b6qw7pG1VSs3WJ22o/giphy.gif)
 
