@@ -29,6 +29,8 @@ Requests made to the API MUST have the following headers:
 
         'authorization' : 'qQWrg*Ws+/MS2#>!QQf89r!(8g~ePA'
 
+![](https://media.giphy.com/media/3b6qw7pG1VSs3WJ22o/giphy.gif)
+
 **Deploying Locally**
 
 ![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-start.png)
@@ -52,11 +54,11 @@ Requests made to the API MUST have the following headers:
   
 | Products API  |Method| 
 | ------------- | -------------   | 
-|[Create a new Product](#createproduct)        |`/Post  `    |
+|[Create a new ProductInterface](#createproduct)        |`/Post  `    |
 |[Fetch all Products](#fetchproducts)          |`/Get`      |
 |[Fetch a Produt by ID](#fetchproduct) |`/Get    `  |
-|[Update a Product by ID](#updateproduct) |`/Update `   |
-|[Delete a Product by ID](#deleteproduct) |`/Delete   ` |
+|[Update a ProductInterface by ID](#updateproduct) |`/Update `   |
+|[Delete a ProductInterface by ID](#deleteproduct) |`/Delete   ` |
 
 | Orders API  |Method| 
 | ------------- | -------------   | 
@@ -70,7 +72,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="createshop" /> 
 
-## Create a new Shop - G
+## Create a new Shop 
 
 ----
 
@@ -133,7 +135,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="fetchshops" />   
 
-## Fetch all Shops -G
+## Fetch all Shops 
 
 ----
   Returns json data about all shops.
@@ -186,7 +188,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="fetchshop" /> 
 
-## Shops API : Fetch a Shop by ID -G
+## Shops API : Fetch a Shop by ID 
 
 ----
   Returns json data about a single shop.
@@ -240,7 +242,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="updateshop" /> 
 
-## Shops API : Update a Shop by ID -G
+## Shops API : Update a Shop by ID
 
 ----
   Updates a product price or name.
@@ -300,7 +302,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="deleteshop" /> 
 
-## Shops API : Delete a Shop by ID -G
+## Shops API : Delete a Shop by ID
 
 ----
   Delete a specified shop.
@@ -356,7 +358,7 @@ Requests made to the API MUST have the following headers:
   
 <a name="createproduct" />   
 
-## Products API : Create a new Product -G
+## Products API : Create a new Product
 
 ----
   Adds a new product to a specified shop.
@@ -442,7 +444,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="fetchproducts" />     
 
-## Products API : Fetch all Products -G
+## Products API : Fetch all Products 
 
 ----
   Returns json data about all products.
@@ -504,7 +506,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="fetchproduct" />     
   
-## Products API : Fetch a Product by ID - G
+## Products API : Fetch a Product by ID 
 
 ----
   Returns json data about a single product.
@@ -562,7 +564,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="updateproduct" />     
 
-## Products API : Update a Product by ID -G
+## Products API : Update a Product by ID 
 
 ----
   Updates a product price or name.
@@ -635,7 +637,7 @@ Requests made to the API MUST have the following headers:
 
 <a name="deleteproduct" />     
 
-## Products API : Delete a Product by ID -G
+## Products API : Delete a Product by ID 
 
 ----
   Delete a specified product.
