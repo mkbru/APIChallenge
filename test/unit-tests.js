@@ -29,7 +29,6 @@ describe('CREATING', () =>{
         .set('Authorization',config.secret)
         .send({'shopId' : 50,'name' : 'snowboardingTesting'})
         .end((err,res) => {
-            console.log(res);
             res.should.have.status(200);
             res.should.be.json;
             // res.body.should.have.property('affectedRows');

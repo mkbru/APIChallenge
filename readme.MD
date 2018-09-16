@@ -32,16 +32,16 @@ Requests made to the API MUST have the following headers:
         
 Below is an example of a request made to the API using the Advanced Rest Client tool.
 
-![](https://media.giphy.com/media/3b6qw7pG1VSs3WJ22o/giphy.gif)
+![](https://media.giphy.com/media/33ItuPfXLjSIFMSblW/giphy.gif)
 
 **Deploying Locally**
 
-![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-start.png)
+![](https://media.giphy.com/media/2imOv2hRva5aJIsnZO/giphy.gif)
 
 
 **Run Tests**
 
-![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-test.png)
+![](https://media.giphy.com/media/ki8t9nCD3JDVqMOAFm/giphy.gif)
 
 
 **API Instructions**
