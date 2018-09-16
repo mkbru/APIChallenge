@@ -1,29 +1,28 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-const config = require('./config/config');
-
-const connection = require('./database/connection');
-
-const shops = require('./controllers/shops');
-const products = require('./controllers/products');
-const orders = require('./controllers/orders');
+const express = require('express'),
+    bodyParser = require('body-parser'),
+    app = express(),
+    config = require('./config/config'),
+    connection = require('./database/connection');
 
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-//using for testing and dev
 app.get('/', (req,res,next) => {
    res.json({"message":"received"});
 });
 
 //routes
+const shops = require('./routes/shops'),
+      products = require('./routes/products'),
+      orders = require('./routes/orders');
+
 app.use('/shops',shops);
 app.use('/products',products);
 app.use('/orders',orders);
 
 
-app.listen(8080, () => console.log('Server listening on port 8080'));
+
+app.listen(config.PORT, () => console.log('API Challenge listening on port 8080'));
 
 module.exports = app;

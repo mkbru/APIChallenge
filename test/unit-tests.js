@@ -4,13 +4,14 @@ const expect = require("chai").expect;
 const server = require('../server');
 const should = chai.should();
 const config = require('../config/config');
-const connection = require('../database/connection');
+const connection = require('../database/connection-testing');
 
 chai.use(chaiHttp);
 
 //change to different db and create a new shop and make changes to shops with id 1
 describe('INTEGRATION TESTS', () =>{
-    it("should connect to the database", (done)=>{
+    it("should connect to the testing database", (done)=>{
+
       connection.connect(((err)=>{
         if(err) throw err;
         connection.state.should.equal('authenticated');
@@ -18,6 +19,7 @@ describe('INTEGRATION TESTS', () =>{
       }))
 
     });
+
 });
 
 describe('CREATING', () =>{
@@ -25,8 +27,9 @@ describe('CREATING', () =>{
         chai.request(server)
         .post('/shops')
         .set('Authorization',config.secret)
-        .send({'shopId' : 1,'shopName' : 'snowboardingTesting'})
+        .send({'shopId' : 50,'name' : 'snowboardingTesting'})
         .end((err,res) => {
+            console.log(res);
             res.should.have.status(200);
             res.should.be.json;
             // res.body.should.have.property('affectedRows');
@@ -189,48 +192,48 @@ describe('UPDATING', () =>{
         })  
     });
 });
-
-describe('DELETING', () =>{
-
-    it("should delete an order", (done) => {
-        chai.request(server)
-                .delete('/orders/1')
-                .set('Authorization',config.secret)
-                .end((err,res) => {
-                    res.should.have.status(200);
-                    res.should.be.json;
-                    // res.body.should.have.property('affectedRows');
-                    // res.body.affectedRows.should.equal(1);
-                    done();
-                })
-           
-    });
-
-    it("should delete a product", (done) => {
-        chai.request(server)
-                .delete('/products/1')
-                .set('Authorization',config.secret)
-                .end((err,res) => {
-                    res.should.have.status(200);
-                    res.should.be.json;
-                    // res.body.should.have.property('affectedRows');
-                    // res.body.affectedRows.should.equal(1);
-                    done();
-                })
-           
-    }); 
-
-    it("should delete a shop", (done) => {
-        chai.request(server)
-        .delete('/shops/1')
-        .set('Authorization',config.secret)
-        .end((err,res) => {
-            res.should.have.status(200);
-            res.should.be.json;
-            // res.body.should.have.property('affectedRows');
-            // res.body.affectedRows.should.equal(1);
-            done();
-        })
-       
-    }); 
-});
+//
+// describe('DELETING', () =>{
+//
+//     it("should delete an order", (done) => {
+//         chai.request(server)
+//                 .delete('/orders/1')
+//                 .set('Authorization',config.secret)
+//                 .end((err,res) => {
+//                     res.should.have.status(200);
+//                     res.should.be.json;
+//                     // res.body.should.have.property('affectedRows');
+//                     // res.body.affectedRows.should.equal(1);
+//                     done();
+//                 })
+//
+//     });
+//
+//     it("should delete a product", (done) => {
+//         chai.request(server)
+//                 .delete('/products/1')
+//                 .set('Authorization',config.secret)
+//                 .end((err,res) => {
+//                     res.should.have.status(200);
+//                     res.should.be.json;
+//                     // res.body.should.have.property('affectedRows');
+//                     // res.body.affectedRows.should.equal(1);
+//                     done();
+//                 })
+//
+//     });
+//
+//     it("should delete a shop", (done) => {
+//         chai.request(server)
+//         .delete('/shops/1')
+//         .set('Authorization',config.secret)
+//         .end((err,res) => {
+//             res.should.have.status(200);
+//             res.should.be.json;
+//             // res.body.should.have.property('affectedRows');
+//             // res.body.affectedRows.should.equal(1);
+//             done();
+//         })
+//
+//     });
+// });

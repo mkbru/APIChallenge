@@ -1,8 +1,15 @@
-<link href="/css/markdown.css" rel="stylesheet"></link>
+
+<a name="top" /> 
 
 ## API Challenge
 
-Give description about this project and maybe tech stalk.
+This is the server-side API i designed I for the Developer intern challenge.
+
+The API is written using Node.js/Express framework and MySQL.
+
+The application is running as a service on GKE accessible at this <ip>
+
+Body content type must be set to application/json
 
 ----
 
@@ -38,32 +45,32 @@ Requests made to the API MUST have the following headers:
 | Shops API |Method| 
 |------------- | -------------   | 
 |[Create a new Shop](#createshop)        |`/Post `     |
-|[Fetch all Shops](#fetchshop)          |`/Get  `    |
-|[Fetch a Shop by ID]() |`/Get `     |
-|[Update a Shop by ID]() |`/Update `   |
-|[Delete a Shop by ID]() |`/Delete`    |
+|[Fetch all Shops](#fetchshops)          |`/Get  `    |
+|[Fetch a Shop by ID](#fetchshop) |`/Get `     |
+|[Update a Shop by ID](#updateshop) |`/Update `   |
+|[Delete a Shop by ID](#deleteshop) |`/Delete`    |
   
 | Products API  |Method| 
 | ------------- | -------------   | 
-|[Create a new Product]()        |`/Post  `    |
-|[Fetch all Products]()          |`/Get`      |
-|[Fetch a Produt by ID]() |`/Get    `  |
-|[Update a Product by ID]() |`/Update `   |
-|[Delete a Product by ID]() |`/Delete   ` |
+|[Create a new Product](#createproduct)        |`/Post  `    |
+|[Fetch all Products](#fetchproducts)          |`/Get`      |
+|[Fetch a Produt by ID](#fetchproduct) |`/Get    `  |
+|[Update a Product by ID](#updateproduct) |`/Update `   |
+|[Delete a Product by ID](#deleteproduct) |`/Delete   ` |
 
 | Orders API  |Method| 
 | ------------- | -------------   | 
-|[Create a new Order]()        |`/Post   `   |
-|[Fetch all Orders]()          |`/Get `     |
-|[Fetch an order by ID]() |`/Get  `    |
-|[Update an order by ID]() |`/Update `   |
-|[Delete an order by ID]() |`/Delete  `  |
+|[Create a new Order](#createorder)        |`/Post   `   |
+|[Fetch all Orders](#fetchorders)          |`/Get `     |
+|[Fetch an order by ID](#fetchorder) |`/Get  `    |
+|[Update an order by ID](#updateorder) |`/Update `   |
+|[Delete an order by ID](#deleteorder) |`/Delete  `  |
   
 
 
 <a name="createshop" /> 
 
-## Create a new Shop
+## Create a new Shop - G
 
 ----
 
@@ -85,15 +92,15 @@ Requests made to the API MUST have the following headers:
 
         {
             "shopId" : 5,
-            "shopName" : "Snowboard Shop"
+            "name" : "Snowboard Shop"
         }
 
 * **Success Response:**
   
   * **Code:** 200 <br />
-    **Content:** `{	
-                    	"shopId" : 5,
-                   	"shopName" : "Snowboard Shop"
+    **Content:** `{
+                  "message": "added shop",
+                  "name": "Snowboard Shop"
                   }`
  
 * **Error Response:**
@@ -124,9 +131,9 @@ Requests made to the API MUST have the following headers:
   In the current design it is the clients responsibility to generate the shop ID.
 
 
-<a name="fetchshop" />   
+<a name="fetchshops" />   
 
-## Fetch all Shops
+## Fetch all Shops -G
 
 ----
   Returns json data about all shops.
@@ -153,12 +160,12 @@ Requests made to the API MUST have the following headers:
   * **Code:** 200 <br />
     **Content:** `{
                   "shop_id": 1,
-                  "shop_name": "Camping Shop"
+                  "name": "Snowboarding Shop"
                   },
                     {
                   "shop_id": 2,
-                  "shop_name": "Clothing Shop"
-                  }`
+                  "name": "Clothing Shop"
+                  },`
  
 * **Error Response:**
 
@@ -177,8 +184,9 @@ Requests made to the API MUST have the following headers:
 
   The call to /shops will fetch all shops
 
+<a name="fetchshop" /> 
 
-## Shops API : Fetch a Shop by ID
+## Shops API : Fetch a Shop by ID -G
 
 ----
   Returns json data about a single shop.
@@ -206,7 +214,7 @@ Requests made to the API MUST have the following headers:
   * **Code:** 200 <br />
     **Content:** `{
                   "shop_id": 1,
-                  "shop_name": "Camping"
+                  "name": "Snowboarding Shop"
                   }`
  
 * **Error Response:**
@@ -230,7 +238,9 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
-## Shops API : Update a Shop by ID
+<a name="updateshop" /> 
+
+## Shops API : Update a Shop by ID -G
 
 ----
   Updates a product price or name.
@@ -252,7 +262,7 @@ Requests made to the API MUST have the following headers:
 * **Data Params**
 
         {   
-            "shopName" : "Tennis Shop"
+            "name" : "Tennis Shop"
         }
 
 * **Success Response:**
@@ -260,7 +270,7 @@ Requests made to the API MUST have the following headers:
   * **Code:** 200 <br />
     **Content:** `{
                   "message": "updated shop",
-                  "shopName": "Tennis Shop"
+                  "id": "1"
                   }`
  
 * **Error Response:**
@@ -278,17 +288,19 @@ Requests made to the API MUST have the following headers:
 * **Sample Call:**
 
          {
-            url: "/products/1",
+            url: "/shops/1",
             Content-Type: "application/json",
             type : "PUT",
-            body :  {   
-                        "shopName" : "Tennis Shop"
-                    }
+            body :  
+                {   
+                "shopName" : "Tennis Shop"
+                }
          }
 * **Notes:**
 
+<a name="deleteshop" /> 
 
-## Shops API : Delete a Shop by ID
+## Shops API : Delete a Shop by ID -G
 
 ----
   Delete a specified shop.
@@ -342,8 +354,9 @@ Requests made to the API MUST have the following headers:
 
   Deleting a shop will delete any products or orders tied to it.
   
+<a name="createproduct" />   
 
-## Products API : Create a new Product
+## Products API : Create a new Product -G
 
 ----
   Adds a new product to a specified shop.
@@ -364,8 +377,9 @@ Requests made to the API MUST have the following headers:
 
         {
             "productId" : 100,
-            "productName" : "Snowboard",
-            "productPrice" : 500,
+            "name" : "Snowboard",
+            "price" : 500,
+            "inventory": 25,
             "shopId" : 1
         }
 
@@ -374,8 +388,9 @@ Requests made to the API MUST have the following headers:
   * **Code:** 200 <br />
     **Content:** `{
                   "message": "added new product",
-                  "productName": "Snowboard",
-                  "productPrice": 500
+                  "name": "Snowboard",
+                  "price": 500,
+                  "inventory": 50
                   }`
  
 * **Error Response:**
@@ -387,6 +402,19 @@ Requests made to the API MUST have the following headers:
    
   * **Code:** 200 <br /> 
     **Content:**  `{"error": "product already exists"}`
+    
+   OR
+   
+  * **Code:** 200 <br /> 
+    **Content:**  `{"error": "shop does not exist"}`
+        
+   OR
+   
+  * **Code:** 200 <br /> 
+    **Content:**  `{
+                   "error": "all fields must be set",
+                   "fields": "productID,name,price,inventory,shopId"
+                   }`
    
 
 
@@ -399,17 +427,22 @@ Requests made to the API MUST have the following headers:
             body : {
                 {
                     "productId" : 100,
-                    "productName" : "Snowboard",
-                    "productPrice" : 500,
+                    "name" : "Snowboard",
+                    "price" : 500,
+                    "inventory": 50,
                     "shopId" : 1
                 }
             }
          }
 * **Notes:**
 
-  In the current design it is the clients responsibility to generate the product ID.
+  For simplicity the client should provide the product UID.
+  
+  Added inventory field to product to extend base functionality, as this is most likely important information in e-commerce systems.
 
-## Products API : Fetch all Products
+<a name="fetchproducts" />     
+
+## Products API : Fetch all Products -G
 
 ----
   Returns json data about all products.
@@ -435,23 +468,22 @@ Requests made to the API MUST have the following headers:
   
   * **Code:** 200 <br />
     **Content:** `{
-                  "product_id": 1,
-                  "product_name": "burton snowboard",
-                  "product_price": 450,
-                  "shop_id": 1
-                  },
+                  "products": [
                     {
-                  "product_id": 2,
-                  "product_name": "burton boots",
-                  "product_price": 400,
-                  "shop_id": 1
+                  "productId": 1,
+                  "name": "Burton Snowboard",
+                  "price": 450,
+                  "inventory": 100,
+                  "shopId": 1
                   },
-                    {
-                  "product_id": 3,
-                  "product_name": "capita snowboard",
-                  "product_price": 250,
-                  "shop_id": 1
-                  },`
+                   {
+                  "productId": 2,
+                  "name": "Burton Boots",
+                  "price": 399.99,
+                  "inventory": 150,
+                  "shopId": 1
+                  }
+                  }`
  
 * **Error Response:**
 
@@ -469,8 +501,10 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
   The call to /products will fetch all products from all shops
+
+<a name="fetchproduct" />     
   
-## Products API : Fetch a Product by ID
+## Products API : Fetch a Product by ID - G
 
 ----
   Returns json data about a single product.
@@ -497,9 +531,10 @@ Requests made to the API MUST have the following headers:
   
   * **Code:** 200 <br />
     **Content:** `{
-                  "product_id": 2,
-                  "product_name": "burton boots",
-                  "product_price": 400,
+                  "product_id": 4,
+                  "name": "Forum Snowboard",
+                  "price": 369.79,
+                  "inventory": 50,
                   "shop_id": 1
                   }`
  
@@ -525,7 +560,9 @@ Requests made to the API MUST have the following headers:
 * **Notes:**
 
 
-## Products API : Update a Product by ID
+<a name="updateproduct" />     
+
+## Products API : Update a Product by ID -G
 
 ----
   Updates a product price or name.
@@ -546,17 +583,19 @@ Requests made to the API MUST have the following headers:
 
 * **Data Params**
 
-        {   
-            "productName" : "snowboard",
-            "productPrice" : 505
+        {
+          "name" : "skis",
+          "price": 200,
+          "inventory":50
         }
 
 * **Success Response:**
   
   * **Code:** 200 <br />
     **Content:** `{
-                   	"productName" : "snowboard",
-                     "productPrice" : 505
+                  "message": "updated product",
+                  "name": "skis",
+                  "price": 200
                   }`
  
 * **Error Response:**
@@ -569,6 +608,14 @@ Requests made to the API MUST have the following headers:
   * **Code:** 200 <br /> 
     **Content:**  `{"error": "product doesn't exist"}`
    
+   OR
+   
+  * **Code:** 200 <br /> 
+    **Content:**  `{
+                   "error": "all fields must be set",
+                   "fields": "name,price,inventory"
+                   }`
+   
 
 
 * **Sample Call:**
@@ -577,15 +624,18 @@ Requests made to the API MUST have the following headers:
             url: "/products/1",
             Content-Type: "application/json",
             type : "PUT",
-            body :  {   
-                        "productName" : "snowboard",
-                        "productPrice" : 505
-                    }
+            body :
+                {
+                  "name" : "skis",
+                  "price": 200,
+                  "inventory":50
+                }
          }
 * **Notes:**
 
+<a name="deleteproduct" />     
 
-## Products API : Delete a Product by ID
+## Products API : Delete a Product by ID -G
 
 ----
   Delete a specified product.
@@ -637,6 +687,7 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
+<a name="createorder" />     
 
 ## Orders API : Create a new Order
 
@@ -678,7 +729,14 @@ Requests made to the API MUST have the following headers:
 
   * **Code:** 401 UNAUTHORIZED <br /> 
     **Content:**  `{"HTTP/1.1": "401 Unauthorized", "Date": "2018-09-12T17:16:41.183Z"}`
-
+   
+   OR
+   
+  * **Code:** 200 <br /> 
+    **Content:**  `{
+                   "error": "not enough inventory in stock",
+                   "amount requested": 200
+                   }`
    OR              
    
   * **Code:** 200 <br /> 
@@ -724,10 +782,12 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
-  The order Id is generated by the client.
+  The order Id needs to be generated by the client.
   
   The order cannot contain items from multiple shops.
   
+<a name="fetchorders" />
+      
 ## Orders API : Fetch all Orders
 
 ----
@@ -802,7 +862,8 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
-
+<a name="fetchorder" />
+      
 ## Orders API : Fetch an Order by ID
 
 ----
@@ -866,7 +927,8 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
-
+<a name="updateorder" />
+      
 ## Orders API : Update an Order by ID
 
 ----
@@ -889,7 +951,6 @@ Requests made to the API MUST have the following headers:
 * **Data Params**
 
         {
-        	"orderId" : 1,
           	"productId" : 6,
           	"quantity" : 3
         }
@@ -919,7 +980,7 @@ Requests made to the API MUST have the following headers:
 * **Sample Call:**
 
          {
-            url: "/products/1",
+            url: "/orders/1",
             Content-Type: "application/json",
             type : "PUT",
             body :  
@@ -931,6 +992,8 @@ Requests made to the API MUST have the following headers:
          }
 * **Notes:**
 
+<a name="deleteorder" />
+      
 ## Orders API : Delete an Order by ID
 
 ----
