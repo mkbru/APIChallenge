@@ -5,9 +5,9 @@
 
 This is the API designed for the Developer intern challenge.
 
-The API is written using the Node.js/Express framework and MySQL database.
+The API is written using the Node.js/Express framework and MySQL.
 
-The application is running publicly on kubernetes and can be accessed on <ip>
+The application is packaged in a Docker container and is running on Kubernetes and can be accessed on <ip>
 
 
 ----
@@ -59,7 +59,7 @@ Below is an example of a request made to the API using the Advanced Rest Client 
 | ------------- | -------------   | 
 |[Create a new ProductInterface](#createproduct)        |`/Post  `    |
 |[Fetch all Products](#fetchproducts)          |`/Get`      |
-|[Fetch a Produt by ID](#fetchproduct) |`/Get    `  |
+|[Fetch a Product by ID](#fetchproduct) |`/Get    `  |
 |[Update a ProductInterface by ID](#updateproduct) |`/Update `   |
 |[Delete a ProductInterface by ID](#deleteproduct) |`/Delete   ` |
 

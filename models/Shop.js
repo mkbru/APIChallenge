@@ -4,7 +4,7 @@ const Shop = {
     addShop: (req,res)=>{
         const shopId = req.body.shopId;
         const name = req.body.name;
-        const query = "INSERT INTO shops (shop_id,name) VALUES ('"+shopId+"','"+name+"')";
+        const query = "INSERT INTO shops (shop_id,name) VALUES ('"+shopId+"','"+name+"')"; //results[0]
         const query2 = "select count(*) AS COUNT from shops where shop_id = ?;";
 
         connection.query(

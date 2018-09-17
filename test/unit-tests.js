@@ -31,8 +31,8 @@ describe('CREATING', () =>{
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body.should.have.property('affectedRows');
-            // res.body.affectedRows.should.equal(1);
+            res.body.should.have.property('message');
+            res.body.message.should.equal('added shop');
             done();
         })
     }); //ok
@@ -41,13 +41,13 @@ describe('CREATING', () =>{
         chai.request(server)
         .post('/products')
         .set('Authorization',config.secret)
-        .send({'productId' : 1,'productName' : 'productTest','productPrice':10,'shopId':1}
+        .send({'productId' : 74927,'name' : 'productTest','price':10,'inventory':5,'shopId':4637573}
         )
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body.should.have.property('affectedRows');
-            // res.body.affectedRows.should.equal(1);
+            res.body.should.have.property('message');
+            res.body.message.should.equal('added new product');
             done();
         })
        
@@ -57,13 +57,13 @@ describe('CREATING', () =>{
         chai.request(server)
         .post('/orders')
         .set('Authorization',config.secret)
-        .send({'orderId' : 1,'productId':1,'shopId':1,'quantity':2}
+        .send({'orderId' : 937485,'productId':74927,'shopId':4637573,'quantity':2}
         )
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body.should.have.property('affectedRows');
-            // res.body.affectedRows.should.equal(1);
+            res.body.should.have.property('message');
+            res.body.message.should.equal('added order item');
             done();
         })
        
@@ -80,21 +80,19 @@ describe('READING', () =>{
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body[0].should.have.property('shop_id');
-            // res.body[0].should.have.property('shop_name');
+            res.body[0].should.have.property('shop_id');
             done();
         })
     }); //ok
 
     it("should get shop with specified id", (done) => {
         chai.request(server)
-        .get('/shops/1')
+        .get('/shops/4637573')
         .set('Authorization',config.secret)
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body[0].should.have.property('shop_id');
-            // res.body[0].should.have.property('shop_name');
+            res.body[0].should.have.property('shop_id');
             done();
         })
     }); //ok
@@ -107,21 +105,19 @@ describe('READING', () =>{
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body[0].should.have.property('product_id');
-            // res.body[0].should.have.property('product_name');
+            res.body[0].should.have.property('products');
             done();
         }); 
     }); 
 
     it("should get product with specified id", (done) => {
         chai.request(server)
-        .get('/products/1')
+        .get('/products/74927')
         .set('Authorization',config.secret)
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body[0].should.have.property('product_id');
-            // res.body[0].should.have.property('product_name');
+            res.body.should.have.property('product_id');
             done();
         }); 
     });
@@ -133,21 +129,18 @@ describe('READING', () =>{
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body[0].should.have.property('product_id');
-            // res.body[0].should.have.property('product_name');
+            res.body[0].should.have.property('order');
             done();
         }); 
     }); 
 
     it("should get an order with a specified id", (done) => {
         chai.request(server)
-        .get('/orders/1')
+        .get('/orders/937485')
         .set('Authorization',config.secret)
         .end((err,res) => {
-            res.should.have.status(200);
             res.should.be.json;
-            // res.body.should.have.property('orderId');
-            // res.body.should.have.property('orderTotal');
+            res.body.should.have.property('order');
             done();
         }); 
     });
@@ -156,12 +149,14 @@ describe('READING', () =>{
 describe('UPDATING', () =>{
     it("should update a shop name", (done) => {
         chai.request(server)
-        .put('/shops/1')
+        .put('/shops/4637573')
         .set('Authorization',config.secret)
         .send({'shopName' : 'snowboardingChanged'})
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
+            res.body.should.have.property('message');
+            res.body.message.should.equal('updated shop');
             done();
         })
        
@@ -169,7 +164,7 @@ describe('UPDATING', () =>{
 
     it("should update a product name and price", (done) => {
         chai.request(server)
-        .put('/products/1')
+        .put('/products/74927')
         .set('Authorization',config.secret)
         .send({'productName' : 'changeName', 'productPrice':15})
         .end((err,res) => {
@@ -181,12 +176,14 @@ describe('UPDATING', () =>{
 
     it("should update an orders product quantity", (done) => {
         chai.request(server)
-        .put('/orders/1')
+        .put('/orders/937485')
         .set('Authorization',config.secret)
-        .send({'quantity' : 2, 'productId':1})
+        .send({'quantity' : 2, 'productId':74927})
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
+            res.body.should.have.property('message');
+            res.body.message.should.equal('updated product quantity');
             done();
         })  
     });
@@ -196,13 +193,13 @@ describe('DELETING', () =>{
 
     it("should delete an order", (done) => {
         chai.request(server)
-                .delete('/orders/1')
+                .delete('/orders/937485')
                 .set('Authorization',config.secret)
                 .end((err,res) => {
                     res.should.have.status(200);
                     res.should.be.json;
-                    // res.body.should.have.property('affectedRows');
-                    // res.body.affectedRows.should.equal(1);
+                    res.body.should.have.property('message');
+                    res.body.message.should.equal('deleted order');
                     done();
                 })
 
@@ -210,13 +207,13 @@ describe('DELETING', () =>{
 
     it("should delete a product", (done) => {
         chai.request(server)
-                .delete('/products/1')
+                .delete('/products/74927')
                 .set('Authorization',config.secret)
                 .end((err,res) => {
                     res.should.have.status(200);
                     res.should.be.json;
-                    // res.body.should.have.property('affectedRows');
-                    // res.body.affectedRows.should.equal(1);
+                    res.body.should.have.property('message');
+                    res.body.message.should.equal('deleted product');
                     done();
                 })
 
@@ -229,8 +226,8 @@ describe('DELETING', () =>{
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
-            // res.body.should.have.property('affectedRows');
-            // res.body.affectedRows.should.equal(1);
+            res.body.should.have.property('message');
+            res.body.message.should.equal('deleted shop');
             done();
         })
 
