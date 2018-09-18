@@ -22,17 +22,17 @@ The API is deployed using the Google Kubernetes Engine.
 
 **Authentication**
 
-Requests made to the API MUST have the following headers:
+Requests made to the API MUST have the following headers: (Authorization key in private readme)
 
         'Accept' : 'application/json'
 
-        'Authorization' : 'qQWrg*Ws+/MS2#>!QQf89r!(8g~ePA'
+        'Authorization' : ''
         
         'Content-type' :  'application/json'
         
 Below is an example of a request made to the API using the Advanced Rest Client tool.
 
-![](https://media.giphy.com/media/33ItuPfXLjSIFMSblW/giphy.gif)
+![](https://media.giphy.com/media/1wQMFe4cwvqRGfEzAw/giphy.gif)
 
 **Deploying Locally**
 
