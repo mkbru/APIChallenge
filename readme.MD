@@ -7,7 +7,7 @@ This is the API designed for the Developer intern challenge.
 
 The API is written using the Node.js/Express framework and MySQL.
 
-The application is packaged in a Docker container and is running on Kubernetes and can be accessed on <ip>
+The API is deployed using the Google Kubernetes Engine.
 
 
 ----
