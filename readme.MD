@@ -57,11 +57,11 @@ Below is an example of a request made to the API using the Advanced Rest Client 
   
 | Products API  |Method| 
 | ------------- | -------------   | 
-|[Create a new ProductInterface](#createproduct)        |`/Post  `    |
+|[Create a new Product Interface](#createproduct)        |`/Post  `    |
 |[Fetch all Products](#fetchproducts)          |`/Get`      |
 |[Fetch a Product by ID](#fetchproduct) |`/Get    `  |
-|[Update a ProductInterface by ID](#updateproduct) |`/Update `   |
-|[Delete a ProductInterface by ID](#deleteproduct) |`/Delete   ` |
+|[Update a Product Interface by ID](#updateproduct) |`/Update `   |
+|[Delete a Product Interface by ID](#deleteproduct) |`/Delete   ` |
 
 | Orders API  |Method| 
 | ------------- | -------------   | 
