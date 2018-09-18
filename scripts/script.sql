@@ -29,7 +29,7 @@ create table orders(
 insert into shops(shop_id,shop_name) values (1,'snowboarding');
 insert into shops(shop_id,shop_name) values (2,'clothing');
 insert into shops(shop_id,shop_name) values (3,'camping');
-insert into shops(shop_id,shop_name) values (4,'yoga');
+insert into shops(sh op_id,shop_name) values (4,'yoga');
 
 insert into products(product_id,product_name,product_price,shop_id) values (1,'burton snowboard',450,1);
 insert into products(product_id,product_name,product_price,shop_id) values (2,'burton boots',399.99,1);

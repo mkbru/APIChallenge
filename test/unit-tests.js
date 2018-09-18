@@ -166,10 +166,12 @@ describe('UPDATING', () =>{
         chai.request(server)
         .put('/products/74927')
         .set('Authorization',config.secret)
-        .send({'productName' : 'changeName', 'productPrice':15})
+        .send({'name' : 'testname', 'price':15, 'inventory':500})
         .end((err,res) => {
             res.should.have.status(200);
             res.should.be.json;
+            res.body.should.have.property('message');
+            res.body.message.should.equal('updated product');
             done();
         })  
     });
