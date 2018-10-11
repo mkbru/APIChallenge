@@ -22,17 +22,17 @@ Clone the repo
 
     git clone https://github.com/mkbru/APIChallenge.git
 
+Start minikube
+
+    minikube start
+
 Statement allows communication to docker daemon inside minikube VM
     
     eval $(minikube docker-env)
 
 Build the docker image
 
-    docker build -t mikeapi:v1 .
-    
-Start minikube
-
-    minikube start
+    docker build -t apichallenge:v1 .
     
 Create a deployment using the .yaml file
 
@@ -60,6 +60,8 @@ Below is an example of a request made to the API using the Advanced Rest Client 
 
 ![](https://media.giphy.com/media/1wQMFe4cwvqRGfEzAw/giphy.gif)
 
+Run Tests
+
 ![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-test.png)
 
 
@@ -69,7 +71,6 @@ Below is an example of a request made to the API using the Advanced Rest Client 
 
 ### Application
 
-This is the API designed for the Developer intern challenge.
 
 The API is written using the Node.js/Express framework
 
@@ -92,7 +93,7 @@ and authenticating against that value.
 
 There are tests setup to test the database connection, routes, and CRUD functions in the database tables.
 
-Next step would be moving the code to use an ORM.
+Next step would be moving the code to use an ORM, possibly changing the API
 
 
 

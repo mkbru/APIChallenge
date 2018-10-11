@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: node-api
-        image: hello-node:v1
+        image: apichallenge:v1
         ports:
         - containerPort: 8080
