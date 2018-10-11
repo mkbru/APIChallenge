@@ -1,18 +1,44 @@
 
 <a name="top" /> 
 
-## API Challenge
+## Introduction
 
-This is the API designed for the Developer intern challenge.
+API that is able to support e-commerce functions related to shops products and orders.
 
-The API is written using the Node.js/Express framework and MySQL.
+![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/relationships.png)
 
-The API is deployed using the Google Kubernetes Engine.
+## Development Locally
+
+### Prerequisites:
+
+[Install Docker](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+
+[Install Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
+[Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
 
-----
+Clone the repo
 
-**Testing the API**
+    git clone https://github.com/mkbru/APIChallenge.git
+
+Statement allows communication to docker daemon inside minikube VM
+    
+    eval $(minikube docker-env)
+
+Build the docker image
+
+    docker build -t mikeapi:v1 .
+    
+Start minikube
+
+    minikube start
+    
+Create a deployment using the .yaml file
+
+    kubectl apply -f api.yaml
+    
+## Usage    
 
 * [Advanced Rest Client (Personal Favourite)](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
 
@@ -34,14 +60,56 @@ Below is an example of a request made to the API using the Advanced Rest Client 
 
 ![](https://media.giphy.com/media/1wQMFe4cwvqRGfEzAw/giphy.gif)
 
-**Deploying Locally**
-
-![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-start.png)
-
-
-**Run Tests**
-
 ![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/npm-test.png)
+
+
+## System Design
+
+![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/appdiagram.png)
+
+### Application
+
+This is the API designed for the Developer intern challenge.
+
+The API is written using the Node.js/Express framework
+
+* Powerful libraries, package management
+
+The database used is MySQL
+
+* Relational, structured and organized data
+
+<br/>
+
+
+**Extra addition of inventory field to products table to be able to fufill orders properly.
+
+
+
+Authentication is currently setup to verify an Authorization token passed in a request header, this token value is currently in a config file. 
+To make this more secure next steps would involve creating a user table and storing random keys that are generated for that specific user in the table
+and authenticating against that value.
+
+There are tests setup to test the database connection, routes, and CRUD functions in the database tables.
+
+Next step would be moving the code to use an ORM.
+
+
+
+### Infrastructure
+
+The API is deployed using the Google Kubernetes Engine, and Minikube locally.
+
+In GCE there is a build trigger setup to take the latest github directory and update the image.
+
+The image is being stored in the container registry.
+
+Migration from SQL to Cloud SQL
+
+----
+
+
+
 
 
 **API Instructions**
