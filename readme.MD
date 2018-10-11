@@ -88,12 +88,12 @@ The database used is MySQL
 
 
 Authentication is currently setup to verify an Authorization token passed in a request header, this token value is currently in a config file. 
-To make this more secure next steps would involve creating a user table and storing random keys that are generated for that specific user in the table
+To make this more secure and production ready next steps would involve creating a user table and storing random keys that are generated for that specific user in the table
 and authenticating against that value.
 
 There are tests setup to test the database connection, routes, and CRUD functions in the database tables.
 
-Next step would be moving the code to use an ORM, possibly changing the API
+Next steps would be moving the code to use an ORM, possibly changing the API to use serverless functions now that cloud functions support Node.js
 
 
 
@@ -101,11 +101,13 @@ Next step would be moving the code to use an ORM, possibly changing the API
 
 The API is deployed using the Google Kubernetes Engine, and Minikube locally.
 
-In GCE there is a build trigger setup to take the latest github directory and update the image.
+Migrated from SQL to Cloud SQL
 
 The image is being stored in the container registry.
 
-Migration from SQL to Cloud SQL
+In GCE there is a build trigger setup to take the latest github directory and update the image.
+
+
 
 ----
 
