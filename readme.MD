@@ -3,7 +3,7 @@
 
 ## Introduction
 
-API that is able to support e-commerce functions related to shops products and orders.
+This API is able to support e-commerce functions related to shops,products and orders.
 
 ![alt text](https://github.com/mkbru/APIChallenge/blob/master/images/relationships.png)
 
@@ -101,11 +101,11 @@ Next steps would be moving the code to use an ORM, possibly changing the API to 
 
 The API is deployed using the Google Kubernetes Engine, and Minikube locally.
 
-Migrated from SQL to Cloud SQL
+Migrated from SQL to Cloud SQL.
 
 The image is being stored in the container registry.
 
-In GCE there is a build trigger setup to take the latest github directory and update the image.
+In GCE there is a build trigger setup to monitor anytime there is a push to master, it rebuilds the image.
 
 
 
